@@ -1,0 +1,55 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="./ToggleLayer.js"></script>
+    <style>
+      button {
+        width:200px;
+        height:40px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button class="toggle-loaded">
+      THIS LAYER CHANGE AFTER LOADED
+    </button>
+    <br><br>
+    <button class="toggle-hovering">
+      THIS LAYER CHANGE AFTER HOVER
+    </button>
+    <br><br>
+    <button class="toggle-click">
+      THIS LAYER CHANGE AFTER CLICK
+    </button>
+  </body>
+
+  <script>
+    let q = new ToggleLayer({
+      el: document.querySelector('button.toggle-loaded'),
+      layer: ['<span>MEGA</span> REALLY', 'RIGHT', 'TRULY'],
+      e: 'loaded',
+      fade: 500,
+      delay: 1000
+    })
+
+    let qq = new ToggleLayer({
+      el: document.querySelector('button.toggle-hovering'),
+      layer: ['<span>MEGA</span> REALLY', 'RIGHT', 'TRULY'],
+      e: 'hover',
+      loop: false,
+      fade: 500,
+      delay: 1000
+    })
+
+    let qqq = new ToggleLayer({
+      el: document.querySelector('button.toggle-click'),
+      layer: ['<span>MEGA</span> REALLY', 'RIGHT', 'TRULY'],
+      e: 'click',
+      fade: 500,
+      delay: 200
+    })
+  </script>
+</html>
